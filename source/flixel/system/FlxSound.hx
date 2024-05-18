@@ -786,17 +786,4 @@ class FlxSound extends FlxBasic
 		return _length;
 	}
 
-	override public function toString():String
-	{
-		return FlxStringUtil.getDebugString([
-			LabelValuePair.weak("playing", playing),
-			LabelValuePair.weak("time", time),
-			LabelValuePair.weak("length", length),
-			LabelValuePair.weak("volume", volume),
-			LabelValuePair.weak("pitch", pitch)
-		]);
-	}
-}
-#else
-typedef FlxSound = flixel.sound.FlxSound;
 #end
