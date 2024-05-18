@@ -785,5 +785,3 @@ class FlxSound extends FlxBasic
 	{
 		return _length;
 	}
-
-#end
