@@ -590,20 +590,20 @@ class FlxSound extends FlxBasic
 		_transform.volume = #if FLX_SOUND_SYSTEM (FlxG.sound.muted ? 0 : 1) * FlxG.sound.volume * #end
 			(group != null ? group.volume : 1) * _volume * _volumeAdjust;
 
-		if (_channel != null)
-		{
-			_channel.soundTransform = _transform;
-			@:privateAccess
-			if (_channel.__source != null)
+		//if (_channel != null)
+		//{
+			//_channel.soundTransform = _transform;
+			//@:privateAccess
+			//if (_channel.__source != null)
 			{
-				#if cpp
-				@:privateAccess
-				this._channel.__source.__backend.setPitch(_pitch);
+			//	//#if cpp
+				//@:privateAccess
+				// this._channel.__source.__backend.setPitch(_pitch);
 				// trace('changing $name pitch new $_pitch');
-				#end
-			}
-		}
-	}
+				//#end
+			//}/
+		//}
+	//}
 
 	/**
 	 * An internal helper function used to attempt to start playing
